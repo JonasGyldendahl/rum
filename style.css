@@ -350,7 +350,7 @@ header h1 {
   height: 33rem;
 }
 
-#prov h2, #service h2, #about h2, #contact h2, #benefit h2 {
+#prov h2, #service h2, #about h2, #benefit h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
@@ -444,7 +444,7 @@ header h1 {
 }
 
 /* reviews section */
-#reviews, #contact {
+#reviews {
   height: 25rem;
 }
 
@@ -454,12 +454,6 @@ header h1 {
   -ms-grid-columns: 40% 60%;
       grid-template-columns: 40% 60%;
   height: 100%;
-}
-
-#contact h2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / span 3;
 }
 
 #reviews ul {
@@ -581,33 +575,86 @@ header h1 {
 }
 
 /* contact section */
-#contact #con-art {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 30% 40% 30%;
-      grid-template-columns: 30% 40% 30%;
-  padding: 0 10rem;
+#contact {
+  height: 45rem;
+  margin-top: 2rem;
+  background-image: url(images/office.png);
+  background-repeat: no-repeat;
 }
 
-#contact ul {
-  list-style: none;
-  font-size: 1.8rem;
+#contact article {
+  width: 50rem;
+  margin: 0 auto;
+  height: 40rem;
+  background-color: #3f2347;
+  border-radius: 25px;
 }
 
-#contact span {
+#contact h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#contact article form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact article form input, #contact article form textarea {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+#contact #fname, #contact #email {
+  width: 75%;
+  margin: 0 auto;
+  height: 3rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 10px;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+#contact #ym {
+  width: 75%;
+  margin: 2rem auto 0;
+  height: 15rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 0 0 1rem;
+  font-weight: 600;
+}
+
+#contact #email {
+  margin-top: 2rem;
+}
+
+#contact #submit {
+  width: 10rem;
+  margin: 2rem auto 0;
+  padding: 0.5rem;
+  background-color: #FAB600;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
-#con-ceo {
-  text-align: center;
-}
-
-#con-info ul {
-  padding-right: 8rem;
-}
-
-#con-info ul li {
-  margin: 2rem 0 0 3rem;
+#contact #submit:hover {
+  background-color: #ffcd48;
+  color: #3f2347;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 /* footer section */
