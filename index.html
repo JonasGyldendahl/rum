@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
   <!-- Top bar -->
-  <header class="row m-0">
-    <div class="col-4">
-      <a href="#"><img src="images/rtf.png" alt="Rum til forandring logo"></a>
+<header>
+    <div>
+      <a href="#"><img src="images/rtf.png" alt="Rum"></a>
     </div>
-    <section class="col-4 text-center">
+    <section>
       <h1>RUM til forandring</h1>
     </section>
-    <nav class="col-4">
+    <nav>
       <div id="menuToggle">
         <input type="checkbox" id="toggle" onClick="toggleMenu()" />
       
@@ -29,9 +28,9 @@
       </div>
     </nav>
   </header>
-  
+
   <!-- Menu items -->
-  <div class="row m-0 menu-closed" id="menu">
+  <div class="menu-closed" id="menu">
     <ul>
       <a href="#">
         <li>Home</li>
@@ -51,12 +50,17 @@
     </ul>
   </div>
 
-  <!-- Main content -->
+  <!--############ Main content ############-->
+
+  <!-- Banner section -->
   <main>
     <section class="banner">
-      <h2>Invest in your ambitions</h2>
-      <h3>Together we make room for progress</h3>
+      <div>
+        <h2>Invest in your ambitions</h2>
+        <h3>Together we make room for progress</h3>
+      </div>
     </section>
+
     <!-- Info boxes -->
     <section class="boxes info">
       <a href="#about"><article><h3 id="box-1">About RUM til forandring</h3></article></a>
@@ -65,6 +69,7 @@
       <a href="#service"><article><h3 id="box-4">Our services and consultancy</h3></article></a>
     </section>
     <div class="info"></div>
+
     <!-- call to action info boxes -->
     <section class="cta-info">
       <article class="cta-box">
@@ -77,13 +82,14 @@
       </article>
       <article class="cta-box">
         <h3>Do you have a medium size business and need help with managing it?</h3>
-        <div class="cta-box-i box-i2">
+        <div class="cta-box-i">
           <img src="images/medium-b.svg" alt="medium business icon">
           <img src="images/medium-bp.svg" class="img-bp bp-mt" alt="medium business plus icon">
         </div>
         <a href="medium.html">Click here</a>
       </article>
     </section>
+
     <!-- testemonials -->
     <section id="reviews">
       <article>
@@ -99,69 +105,57 @@
         </div>
       </article>
     </section>
+
     <!-- about section -->
     <section id="about">
+      <h2>about RUM til forandring</h2>
+      <div>
+        <img src="images/about.png" alt="image of a woman in the about section">
+      </div>
       <article>
-        <h2>about RUM til forandring</h2>
         <p>Tiramisu carrot cake pudding toffee tiramisu toffee croissant sweet. Jelly-o cake pie dragée brownie jelly beans brownie. Muffin sweet roll bear claw powder. Topping halvah biscuit lemon drops chocolate cake. Toffee sweet roll donut oat cake biscuit chocolate bar danish cotton candy cake. Sugar plum cheesecake jujubes topping dragée soufflé chocolate halvah. Oat cake tiramisu jelly beans topping. Apple pie sweet chocolate bar tootsie roll tart bonbon sweet croissant cotton candy. Lollipop jelly jelly beans candy gingerbread sweet roll jelly beans lollipop.</p>
       </article>
     </section>
+
     <!-- services section -->
-    <section class="prov">
-      <article>
-        <h2>we provide help with</h2>
-      </article>
+    <section id="prov">
+      <h2>I provide help with</h2>
       <div class="info-grid">
-        <div class="info-grid-c">
-          <img src="images/communication.png" alt="communication icon">
-          <h3>Communication <br>& Marketing</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/csr.png" alt="csr icon">
-          <h3>CSR <br>& Sustainability</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/leadership.png" alt="leadership icon">
-          <h3>Leadership <br>& Coaching</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/law.png" alt="law icon">
-          <h3>Law <br>& Compliance</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
+        <section class="info-grid-c">
           <img src="images/business.png" alt="business icon">
-          <h3>Business <br>& Process</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/recruitment.png" alt="recruitment icon">
-          <h3>Recruitment</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/tech.png" alt="technology icon">
-          <h3>Technology <br>& IT</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
-          <img src="images/innovation.png" alt="innovation icon">
-          <h3>Innovation</h3>
-          <span></span>
-        </div>
-        <div class="info-grid-c">
+          <h3>Business</h3>
+          <article>
+            <h4>Forretningsudvikling</h4>
+            <h4>Virksomhedsrådgivning</h4>
+          </article>
+        </section>
+        <section class="info-grid-c">
           <img src="images/org.png" alt="organization icon">
-          <h3>Organization <br>& Development</h3>
-          <span></span>
-        </div>
+          <h3>Organisation</h3>
+          <article>
+            <h4>Organisationsudvikling</h4>
+            <h4>Organisationsstruktur</h4>
+          </article>
+        </section>
+        <section class="info-grid-c">
+            <img src="images/coach.png" alt="coaching icon">
+          <h3>Coaching</h3>
+          <article>
+            <h4>Ledercoaching</h4>
+            <h4>Erhvervscoaching</h4>
+          </article>
+        </section>
+        <section class="info-grid-c">
+          <img src="images/strategy.png" alt="strategy icon">
+          <h3>Strategi</h3>
+          <article>
+              <h4>Strategiarbejde</h4>
+          </article>
+        </section>
       </div>
-      <span id="info-l1"></span>
-      <span id="info-l2"></span>
       <img src="images/rtf.png" id="info-logo" alt="RUM til foranding Logo">
     </section>
+
     <!-- information about the service -->
     <section id="service">
       <article>
@@ -169,6 +163,7 @@
         <p>Tiramisu carrot cake pudding toffee tiramisu toffee croissant sweet. Jelly-o cake pie dragée brownie jelly beans brownie. Muffin sweet roll bear claw powder. Topping halvah biscuit lemon drops chocolate cake. Toffee sweet roll donut oat cake biscuit chocolate bar danish cotton candy cake. Sugar plum cheesecake jujubes topping dragée soufflé chocolate halvah. Oat cake tiramisu jelly beans topping. Apple pie sweet chocolate bar tootsie roll tart bonbon sweet croissant cotton candy. Lollipop jelly jelly beans candy gingerbread sweet roll jelly beans lollipop.</p>
       </article>
     </section>
+
     <!-- contact section -->
     <section id="contact">
       <article id="con-art">

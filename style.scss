@@ -1,3 +1,4 @@
+/* General styles */
 $purple: #3f2347;
 $orange: #F07E2F;
 $burgundy: #872645;
@@ -10,8 +11,18 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif !important;
+  margin: 0;
 }
 
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header section - navigation bar */
 header {
   position: fixed;
   width: 100%;
@@ -20,10 +31,13 @@ header {
   padding: 1rem 0 1rem;
   background-color: #fff;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
 header img {
   width: 50px;
+  margin-left: 2rem;
 }
 
 header h1 {
@@ -31,6 +45,7 @@ header h1 {
   font-weight: bold;
   margin: 0;
   color: $purple;
+  text-align: center;
 }
   
 /* menu button */
@@ -51,6 +66,11 @@ header h1 {
   color: #232323;
   
   transition: color 0.3s ease;
+}
+
+#menu a li:hover {
+  color: $orange;
+  transition: ease 0.3s;
 }
   
 #menuToggle input {
@@ -132,7 +152,7 @@ header h1 {
   z-index: 1;
   width: 100%;
   background: $purple;
-  opacity: 80%;
+  opacity: 85%;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -140,18 +160,18 @@ header h1 {
   
 #menu > ul {
   width: 100%;
-  padding: 1rem 0;
+  padding: 0;
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
   background: $purple;
   list-style-type: none;
-  margin-bottom: 0;
+  margin: 0;
 }
   
 #menu li {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 1.3rem 0;
+  font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
 }
@@ -178,18 +198,22 @@ header h1 {
   height: 30rem;
 }
 
-.banner h2 {
-  font-size: 3rem;
-  position: absolute;
+.banner div {
+  position: relative;
+  line-height: 2rem;
   left: 15%;
-  top: 25%;
+  top: 60%;
+  width: 27.9rem;
+}
+
+.banner h2 {
+  font-size: 2.2rem;
   color: $purple;
 }
 
 .banner h3 {
-  position: absolute;
-  left: 18%;
-  top: 30%;
+  font-size: 1.3rem;
+  text-align: right;
   color: $burgundy;
 }
 
@@ -204,6 +228,11 @@ header h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
+}
+
+.boxes a:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s;
 }
 
 .boxes article {
@@ -221,7 +250,6 @@ header h1 {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 1rem;
 }
 
 .boxes #box-1 {
@@ -251,7 +279,7 @@ header h1 {
 
 .cta-box {
   width: 35rem;
-  height: 20rem;
+  height: 18rem;
   margin: auto;
   background-color: $purple;
   opacity: 90%;
@@ -262,19 +290,14 @@ header h1 {
 }
 
 .cta-box h3 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 500;
   text-align: center;
 }
 
 .cta-box-i {
   width: 100%;
-  padding: 0 2rem;
   text-align: left;
-}
-
-.box-i2 {
-  padding: 0 2rem;
 }
 
 .cta-box-i img {
@@ -282,7 +305,7 @@ header h1 {
 }
 
 .img-bp {
-  margin-left: 54%;
+  margin-left: 64%;
 }
 
 .bp-mt {
@@ -294,14 +317,21 @@ header h1 {
   background-color: $yellow;
   border-radius: 5px;
   color: #fff;
+  font-size: 1.1rem;
+}
+
+.cta-box a:hover {
+  background-color: lighten($color: $yellow, $amount: 20);
+  color: $purple;
+  transition: ease 0.3s;
 }
 
 /* provide section */
-.prov {
-  height: 900px;
+#prov {
+  height: 33rem;
 }
 
-.prov h2, #service h2, #about h2, #contact h2 {
+#prov h2, #service h2, #about h2, #contact h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
@@ -313,57 +343,42 @@ header h1 {
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 70%;
   margin: 0 auto;
 }
 
 .info-grid-c {
-  width: 415px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 10% 80%;
-  grid-template-rows: 75px 140px;
+  width: 100%;
+  flex-direction: column;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+}
+
+.info-grid-c:not(:last-child) {
+  border-right: 1px solid $purple;
 }
 
 .info-grid-c h3 {
+  margin: 1rem 0 0 0;
+  padding: 0;
   text-align: center;
+  font-size: 2.2rem;
+  color: $red;
 }
 
-.info-grid-c span {
-  display: block;
-  width: 80%;
-  height: 2px;
-  background: $yellow;
-  margin: 0 auto;
-  grid-column: span 2 / 3;
-}
-
-#info-l1 {
-  display: block;
-  width: 2px;
-  height: 40rem;
-  background: black;
-  position: relative;
-  left: 37%;
-  top: -77%;
-}
-
-#info-l2 {
-  display: block;
-  width: 2px;
-  height: 40rem;
-  background: black;
-  position: relative;
-  left: 60%;
-  top: -148%;
+.info-grid-c h4 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: $purple;
 }
 
 #info-logo {
   display: block;
   position: relative;
-  width: 8%;
-  top: -170%;
+  width: 8rem;
+  top: -20%;
   left: 85%;
   transform: rotate(27deg);
 }
@@ -377,8 +392,9 @@ header h1 {
 }
 
 #service p, #about p {
-  padding: 0 10rem;
+  padding: 0 10rem 0 5rem;
   font-size: 1.6rem;
+  margin: 0;
 }
 
 /* reviews section */
@@ -439,10 +455,37 @@ header h1 {
 
 /* about us section */
 #about {
-  height: 35rem;
+  height: 50rem;
   margin-top: 2rem;
-  background-image: url(images/office4.png);
-  background-repeat: no-repeat;
+  background-color: #F0F0F0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 6rem;
+}
+
+#about h2 {
+  grid-column: 1 / span 2;
+}
+
+#about div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#about p {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#about img {
+  width: 30rem;
+  height: 30rem;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid $purple;
+  box-shadow: 2rem 2rem $purple;
 }
 
 /* contact section */
