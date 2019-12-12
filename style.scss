@@ -1,0 +1,536 @@
+$primary: #3f2347;
+$secondary: #F07E2F;
+$tertiary: #872645;
+$quaternary: #C5411C;
+$quinary: #FAB600;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 1.2rem 0 1.2rem;
+  background-color: #fff;
+  z-index: 2;
+}
+
+header img {
+  width: 10%;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: $primary;
+}
+  
+/* menu button */
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+  
+  z-index: 4;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+  
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+  
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  right: 0.5rem;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 6;
+  
+  -webkit-touch-callout: none;
+}
+  
+/* burgermenu */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  left: 92.5%;
+  margin-bottom: 5px;
+  position: relative;
+  
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#purple {
+  background: $primary;
+}
+
+#burgondy {
+  background: $tertiary;
+}
+
+#orange {
+  background: $secondary;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+  
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 76% -150%;
+}
+  
+/* transform the slices of burger into a crossmark. */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-10px, -14px);
+}
+  
+/* hide the middle slice. */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+  
+/* the last slice go the other direction */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(-5px, -10px);
+}
+  
+/* menu itself */
+#menu {
+  position: fixed;
+  top: 105px;
+  z-index: 1;
+  width: 100%;
+  background: $primary;
+  opacity: 80%;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+}
+  
+#menu > ul {
+  width: 100%;
+  padding: 1rem 0;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  background: $primary;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+  
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+  
+.menu-closed {
+  transform-origin: 0% 0%;
+  transform: translate(0, -150%);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+  
+.menu-open {
+  transform-origin: 0% 0%;
+  transform: translate(0, 0%);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+
+/* top banner */
+.banner {
+  background-image: url(images/office.png);
+  background-repeat: no-repeat;
+  height: 790px;
+}
+
+.banner h2 {
+  font-size: 3rem;
+  position: absolute;
+  left: 24%;
+  top: 50%;
+}
+
+
+/* info boxes */
+.info {
+  height: 250px;
+}
+
+.boxes {
+  background-color: $primary;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.boxes article {
+  background-color: #fff;
+  height: 300px;
+  width: 400px;
+  border: 2px solid $primary;
+  border-radius: 1%;
+  margin: 100px auto;
+}
+
+.boxes h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.boxes #box-1 {
+  color: $primary;
+}
+
+.boxes #box-2 {
+  color: $tertiary;
+}
+
+.boxes #box-3 {
+  color: $quaternary;
+}
+
+.boxes #box-4 {
+  color: $secondary;
+}
+
+/* call to action section */
+.cta-info {
+  height: 600px;
+  background-image: url(images/office2.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cta-box {
+  width: 720px;
+  height: 400px;
+  margin: auto;
+  background-color: $primary;
+  opacity: 90%;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-box h3 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cta-box-i {
+  width: 100%;
+  padding: 2rem;
+}
+
+.box-i2 {
+  padding: 0 2rem;
+}
+
+.cta-box-i img {
+  width: 8rem;
+}
+
+.img-bp {
+  margin-left: 20rem;
+}
+
+.bp-mt {
+  margin-top: -15px;
+}
+
+.cta-box a {
+  padding: 1rem 2rem;
+  background-color: $quinary;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* provide section */
+.prov {
+  height: 900px;
+}
+
+.prov h2, #service h2, #reviews h2, #about h2, #contact h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: $quinary;
+  margin: 0 0 8rem;
+  padding-top: 4rem;
+  text-transform: uppercase;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.info-grid-c {
+  width: 415px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 10% 80%;
+  grid-template-rows: 75px 140px;
+}
+
+.info-grid-c h3 {
+  text-align: center;
+}
+
+.info-grid-c span {
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: $quinary;
+  margin: 0 auto;
+  grid-column: span 2 / 3;
+}
+
+#info-l1 {
+  display: block;
+  width: 2px;
+  height: 40rem;
+  background: black;
+  position: relative;
+  left: 37%;
+  top: -77%;
+}
+
+#info-l2 {
+  display: block;
+  width: 2px;
+  height: 40rem;
+  background: black;
+  position: relative;
+  left: 60%;
+  top: -148%;
+}
+
+#info-logo {
+  display: block;
+  position: relative;
+  width: 8%;
+  top: -170%;
+  left: 85%;
+  transform: rotate(27deg);
+}
+
+/* our services section */
+#service {
+  margin-top: 2rem;
+  height: 800px;
+  background-image: url(images/office3.png);
+  background-repeat: no-repeat;
+}
+
+#service p, #about p {
+  padding: 0 10rem;
+  font-size: 2rem;
+}
+
+/* reviews section */
+#reviews, #about, #contact {
+  height: 800px;
+}
+
+#reviews article {
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  padding: 0 10rem;
+}
+
+#reviews h2, #contact h2 {
+  grid-column: 1 / span 3;
+}
+
+#reviews ul {
+  list-style: none;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  margin: auto auto auto 0;
+}
+
+#reviews ul li {
+  margin-top: 2rem;
+}
+
+#reviews ul li span {
+  font-weight: bold;
+}
+
+#reviews p {
+  font-size: 2.3rem;
+  display: flex;
+  font-style: italic;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+#reviews div {
+  width: 800px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+/* about us section */
+#about {
+  margin-top: 2rem;
+  background-image: url(images/office4.png);
+  background-repeat: no-repeat;
+}
+
+/* contact section */
+#contact #con-art {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  padding: 0 10rem;
+}
+
+#contact ul {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+#contact span {
+  font-weight: bold;
+}
+
+#con-ceo {
+  text-align: center;
+}
+
+#con-info ul {
+  padding-right: 8rem;
+}
+
+#con-info ul li {
+  margin: 2rem 0 0 3rem;
+}
+
+/* footer section */
+footer {
+  display: grid !important;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  background-color: $primary;
+  height: 150px;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+footer div a:not(:first-child) {
+  margin-left: 3rem;
+}
+
+footer p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#footer-logo {
+  width: 15%;
+  display: block;
+  margin: 2rem 3rem 0 auto;
+}
+
+/* small.html webpage layout */
+#smallb, #mediumb {
+  margin-top: 200px;
+  height: 900px;
+}
+
+#smallb article, #mediumb article {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#smallb article h2, #mediumb article h2 {
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: $quinary;
+  margin: 0 0 4rem;
+  text-transform: uppercase;
+}
+
+#smallb p, #mediumb p {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 5rem 0 15rem;
+}
+
+#smallb-image1, #mediumb-image1 {
+  display: block;
+  position: relative;
+  top: -70%;
+  left: 6%;
+}
+
+#smallb-image2, #mediumb-image2 {
+  display: block;
+  position: relative;
+  top: -69%;
+  left: 6%;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Top bar -->
+    <header class="row m-0">
+        <div class="col-4">
+            <a href="index.html"><img src="images/rtf.png" alt="Rum til forandring logo"></a>
+        </div>
+        <section class="col-4 text-center">
+            <h1>RUM til forandring</h1>
+        </section>
+        <nav class="col-4">
+            <div id="menuToggle">
+                <input type="checkbox" id="toggle" onClick="toggleMenu()" />
+      
+                <span id="purple"></span>
+                <span id="burgondy"></span>
+                <span id="orange"></span>
+            </div>
+        </nav>
+    </header>
+  
+    <!-- Menu items -->
+    <div class="row m-0 menu-closed" id="menu">
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="index.html#service">
+                <li>Services</li>
+            </a>
+            <a href="index.html#reviews">
+                <li>Reviews</li>
+            </a>
+            <a href="index.html#about">
+                <li>About</li>
+            </a>
+            <a href="index.html#contact">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </div>
+    
+    <main>
+        <section id="mediumb">
+            <article>
+                <h2>SPECIAL OFFER FOR MEDIUM SIZE BUSINESSES</h2>
+                <p>
+                    Premium 25-200 employees <br>
+                    Business savings, with a subsequent action plan for your 
+                    development<br>
+                    Corporation (2-4 meetings annually)<br>
+                    Follow-up and adjustment of the plan, with subsequently 
+                    adapted action plan<br>
+                    (2-4 meetings annually)<br><br>
+                        
+                    12 days for individual coaching<br>
+                    5 days a year on low-performers / stress / long-term sick leave
+                    phone/mail sparring on specific issues (unlimited)<br>
+                    Toolbox access, with simple management tools targeted to 
+                    your size<br><br>
+                        
+                    Corporation<br>
+                    20% discount on the hourly rate and other benefits
+                    A facilitated strategy process, consisting of 2 annual seminars 
+                    and preparation and follow-up Preparation of relevant 
+                    proposals for the work on the strategy                        
+                </p>
+                <img src="images/mediumb.png" alt="medium business image">
+            </article>
+            <img src="images/mediumb-b.png" id="mediumb-image1" alt="medium business icon">
+            <img src="images/mediumb-bp.png" id="mediumb-image2" alt="medium business plus icon">
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#"><img src="images/instagram.png" alt="instagram logo"></a>
+            <a href="#"><img src="images/facebook.png" alt="facebook logo"></a>
+            <a href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
+            <a href="#"><img src="images/youtube.png" alt="youtube logo"></a>
+        </div>
+        <p>Copyright &copy; 2019</p>
+        <a href="index.html"><img src="images/rtf.png" id="footer-logo" alt="RUM til forandring logo"></a>
+    </footer>
+    
+    <script src="js.js"></script>
+</body>
+</html>
