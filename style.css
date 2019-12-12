@@ -11,17 +11,17 @@ header {
   width: 100%;
   top: 0;
   margin: 0;
-  padding: 1.2rem 0 1.2rem;
+  padding: 1rem 0 1rem;
   background-color: #fff;
   z-index: 2;
 }
 
 header img {
-  width: 10%;
+  width: 50px;
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
   color: #3f2347;
@@ -123,7 +123,7 @@ header h1 {
 /* menu itself */
 #menu {
   position: fixed;
-  top: 105px;
+  top: 5rem;
   z-index: 1;
   width: 100%;
   background: #3f2347;
@@ -177,21 +177,29 @@ header h1 {
 
 /* top banner */
 .banner {
-  background-image: url(images/office.png);
+  background-image: url(images/banner.png);
   background-repeat: no-repeat;
-  height: 790px;
+  height: 30rem;
 }
 
 .banner h2 {
   font-size: 3rem;
   position: absolute;
-  left: 24%;
-  top: 50%;
+  left: 15%;
+  top: 25%;
+  color: #3f2347;
+}
+
+.banner h3 {
+  position: absolute;
+  left: 18%;
+  top: 30%;
+  color: #872645;
 }
 
 /* info boxes */
 .info {
-  height: 250px;
+  height: 10rem;
 }
 
 .boxes {
@@ -205,15 +213,15 @@ header h1 {
 
 .boxes article {
   background-color: #fff;
-  height: 300px;
-  width: 400px;
+  height: 12rem;
+  width: 22rem;
   border: 2px solid #3f2347;
   border-radius: 1%;
-  margin: 100px auto;
+  margin: 4rem auto;
 }
 
 .boxes h3 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +251,7 @@ header h1 {
 
 /* call to action section */
 .cta-info {
-  height: 600px;
+  height: 30rem;
   background-image: url(images/office2.png);
   background-repeat: no-repeat;
   display: -ms-grid;
@@ -253,8 +261,8 @@ header h1 {
 }
 
 .cta-box {
-  width: 720px;
-  height: 400px;
+  width: 35rem;
+  height: 20rem;
   margin: auto;
   background-color: #3f2347;
   opacity: 90%;
@@ -265,14 +273,15 @@ header h1 {
 }
 
 .cta-box h3 {
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
 }
 
 .cta-box-i {
   width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
+  text-align: left;
 }
 
 .box-i2 {
@@ -280,11 +289,11 @@ header h1 {
 }
 
 .cta-box-i img {
-  width: 8rem;
+  width: 6rem;
 }
 
 .img-bp {
-  margin-left: 20rem;
+  margin-left: 54%;
 }
 
 .bp-mt {
@@ -303,12 +312,12 @@ header h1 {
   height: 900px;
 }
 
-.prov h2, #service h2, #reviews h2, #about h2, #contact h2 {
+.prov h2, #service h2, #about h2, #contact h2 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #FAB600;
-  margin: 0 0 8rem;
+  margin: 0 0 5rem;
   padding-top: 4rem;
   text-transform: uppercase;
 }
@@ -388,23 +397,23 @@ header h1 {
 
 #service p, #about p {
   padding: 0 10rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 /* reviews section */
-#reviews, #about, #contact {
-  height: 800px;
+#reviews, #contact {
+  height: 25rem;
 }
 
 #reviews article {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 30% 50%;
-      grid-template-columns: 20% 30% 50%;
-  padding: 0 10rem;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  height: 100%;
 }
 
-#reviews h2, #contact h2 {
+#contact h2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / span 3;
@@ -415,10 +424,15 @@ header h1 {
   font-size: 1.5rem;
   padding-left: 1rem;
   margin: auto auto auto 0;
+  position: relative;
+  right: 2.8rem;
+  bottom: 0.5rem;
 }
 
 #reviews ul li {
-  margin-top: 2rem;
+  font-style: italic;
+  text-align: right;
+  font-size: 1.2rem;
 }
 
 #reviews ul li span {
@@ -426,30 +440,32 @@ header h1 {
 }
 
 #reviews p {
-  font-size: 2.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 1.8rem;
   font-style: italic;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   padding: 2rem;
+  margin: 0;
+}
+
+#reviews img {
+  margin: auto 0 auto auto;
 }
 
 #reviews div {
-  width: 800px;
-  height: 250px;
-  border: 1px solid black;
+  width: 50rem;
+  height: 16rem;
   border-radius: 5px;
-  margin: auto;
+  border: 1px solid #3f2347;
+  margin: auto auto auto 0;
   -webkit-box-shadow: 3px 3px 5px #aaaaaa;
           box-shadow: 3px 3px 5px #aaaaaa;
 }
 
 /* about us section */
 #about {
+  height: 35rem;
   margin-top: 2rem;
   background-image: url(images/office4.png);
   background-repeat: no-repeat;
