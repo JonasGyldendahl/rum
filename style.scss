@@ -522,15 +522,15 @@ header h1 {
 /* contact section */
 #contact {
   height: 45rem;
-  margin-top: 2rem;
   background-image: url(images/office.png);
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 #contact article {
   width: 50rem;
   margin: 0 auto;
-  height: 40rem;
   background-color: $purple;
   border-radius: 25px;
 }
@@ -580,7 +580,7 @@ header h1 {
 
 #contact #submit {
   width: 10rem;
-  margin: 2rem auto 0;
+  margin: 2rem auto 2rem;
   padding: 0.5rem;
   background-color: $yellow;
   border: none;
