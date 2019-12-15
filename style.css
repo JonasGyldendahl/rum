@@ -36,7 +36,7 @@ header img {
   margin-left: 2rem;
 }
 
-header h1 {
+header p {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
@@ -202,24 +202,31 @@ header h1 {
 .banner {
   background-image: url(images/banner.png);
   background-repeat: no-repeat;
-  height: 30rem;
+  background-position: center;
+  height: 85vh;
 }
 
 .banner div {
   position: relative;
   line-height: 2rem;
-  left: 15%;
-  top: 60%;
-  width: 27.9rem;
+  left: 14%;
+  top: 30%;
+  width: 40%;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FAB600;
 }
 
 .banner h2 {
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   color: #3f2347;
 }
 
 .banner h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-align: right;
   color: #872645;
 }
@@ -503,7 +510,7 @@ header h1 {
   margin-left: 50px;
 }
 
-#about p, #service p, #benefit article {
+#about p, #service p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,6 +542,13 @@ header h1 {
   padding-bottom: 80px;
 }
 
+#benefit article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+}
+
 #benefit ul {
   display: block;
   list-style: none;
@@ -556,8 +570,7 @@ header h1 {
 
 /* contact section */
 #contact {
-  background-image: url(images/office.png);
-  background-repeat: no-repeat;
+  background-color: #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
