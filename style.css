@@ -25,10 +25,12 @@ header {
   padding: 1rem 0 1rem;
   background-color: #fff;
   z-index: 2;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 33.3% 33.3% 33.3%;
-      grid-template-columns: 33.3% 33.3% 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header img {
@@ -76,7 +78,7 @@ header p {
   height: 32px;
   position: absolute;
   top: -7px;
-  right: 0.5rem;
+  right: -7px;
   cursor: pointer;
   opacity: 0;
   z-index: 6;
@@ -88,7 +90,6 @@ header p {
   display: block;
   width: 33px;
   height: 4px;
-  left: 92.5%;
   margin-bottom: 5px;
   position: relative;
   border-radius: 3px;
@@ -227,8 +228,16 @@ header p {
 
 .banner h3 {
   font-size: 1.1rem;
-  text-align: right;
   color: #872645;
+}
+
+.banner a {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 110px;
+  text-align: center;
 }
 
 /* info boxes */
@@ -339,15 +348,16 @@ header p {
   width: 6rem;
 }
 
-.cta-box a {
+.cta-box a, .banner a {
   padding: 1rem 2rem;
   background-color: #FAB600;
   border-radius: 5px;
   color: #fff;
   font-size: 1.1rem;
+  font-weight: 600;
 }
 
-.cta-box a:hover {
+.cta-box a:hover, .banner a:hover {
   background-color: #ffd461;
   color: #3f2347;
   -webkit-transition: ease 0.3s;

@@ -31,8 +31,8 @@ header {
   padding: 1rem 0 1rem;
   background-color: #fff;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  display: flex;
+  justify-content: space-between;
 }
 
 header img {
@@ -79,7 +79,7 @@ header p {
   height: 32px;
   position: absolute;
   top: -7px;
-  right: 0.5rem;
+  right: -7px;
   
   cursor: pointer;
   
@@ -94,7 +94,6 @@ header p {
   display: block;
   width: 33px;
   height: 4px;
-  left: 92.5%;
   margin-bottom: 5px;
   position: relative;
   
@@ -220,8 +219,14 @@ header p {
 
 .banner h3 {
   font-size: 1.1rem;
-  text-align: right;
   color: $burgundy;
+}
+
+.banner a {
+  margin-top: 20px;
+  display: flex;
+  width: 110px;
+  text-align: center;
 }
 
 
@@ -311,15 +316,16 @@ header p {
   width: 6rem;
 }
 
-.cta-box a {
+.cta-box a, .banner a {
   padding: 1rem 2rem;
   background-color: $yellow;
   border-radius: 5px;
   color: #fff;
   font-size: 1.1rem;
+  font-weight: 600;
 }
 
-.cta-box a:hover {
+.cta-box a:hover, .banner a:hover {
   background-color: lighten($color: $yellow, $amount: 20);
   color: $purple;
   transition: ease 0.3s;
