@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="images/rtf.png">
+    <title>Rum til forandring</title>
 </head>
 <body>
   <!-- Top bar -->
@@ -35,14 +36,18 @@
       <a href="#">
         <li>Home</li>
       </a>
-      <a href="#service">
-        <li>Services</li>
+      <div class="dropdown">
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+          <a href="/small.html">Small businesses</a>
+          <a href="/medium.html">Medium businesses</a>
+        </div>
+      </div>
+      <a href="#prov">
+        <li>Areas of expertise</li>
       </a>
-      <a href="#reviews">
-        <li>Reviews</li>
-      </a>
-      <a href="#about">
-        <li>About</li>
+      <a href="blog.html">
+        <li>Blog</li>
       </a>
       <a href="#contact">
         <li>Contact</li>
@@ -60,13 +65,13 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quas minima veritatis eveniet unde est dolorem quidem laudantium repellendus alias, optio magnam maiores numquam placeat. Aut debitis iusto sunt possimus.</p>
         <h2>Invest in your ambitions</h2>
         <h3>Together we make room for progress</h3>
-        <a href="#">Contact me</a>
+        <a href="#contact">Contact me</a>
       </div>
       
     </section>
 
     <!-- Info boxes -->
-    <section class="boxes info">
+    <section class="boxes">
       <a class="b-info-q b-info-first" href="#about"><article><h3 id="box-1">About RUM til forandring</h3></article></a>
       <a class="b-info-q" href="#benefit"><article><h3 id="box-2">How can you benefit from our services?</h3></article></a>
       <a class="b-info-q b-info-first" href="#reviews"><article><h3 id="box-3">Share your opinion about RUM til forandring</h3></article></a>
@@ -191,7 +196,7 @@
     <!-- contact section -->
     <section id="contact">
       <article>
-        <h2>contact me</h2>
+        <h3>contact me</h3>
         <form action="#">
           <input type="text" name="fullname" id="fname" placeholder="Full Name">
           <input type="email" name="email" id="email" placeholder="Email">
@@ -205,11 +210,11 @@
 
   <!-- Footer -->
   <footer>
-    <div>
-      <a href="#"><img src="images/instagram.png" alt="instagram logo"></a>
-      <a href="#"><img src="images/facebook.png" alt="facebook logo"></a>
-      <a href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
-      <a href="#"><img src="images/youtube.png" alt="youtube logo"></a>
+    <div id="footer-social">
+      <a id="socialmedia" href="#"><img src="images/instagram.png" alt="instagram logo"></a>
+      <a id="socialmedia" href="#"><img src="images/facebook.png" alt="facebook logo"></a>
+      <a id="socialmedia" href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
+      <a id="socialmedia" href="#"><img src="images/youtube.png" alt="youtube logo"></a>
     </div>
     <div>
       <ul>

@@ -38,6 +38,11 @@ header {
 header img {
   width: 50px;
   margin-left: 2rem;
+
+  @media only screen and (max-width: 999px) { 
+    margin-left: 10px;
+    width: 30px;
+  }
 }
 
 header p {
@@ -46,6 +51,10 @@ header p {
   margin: 0;
   color: $purple;
   text-align: center;
+
+  @media only screen and (max-width: 999px) {
+    font-size: 2rem;
+  }
 }
   
 /* menu button */
@@ -59,6 +68,11 @@ header p {
   
   -webkit-user-select: none;
   user-select: none;
+
+  @media only screen and (max-width: 999px) {
+    right: 10px;
+    top: 10px
+   }
 }
   
 #menuToggle a {
@@ -155,17 +169,32 @@ header p {
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
+
+  @media only screen and (max-width: 999px) {
+    top: 70px;
+   }
 }
   
 #menu > ul {
   width: 100%;
   padding: 0;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   text-align: center;
   background: $purple;
   list-style-type: none;
   margin: 0;
+
+  @media only screen and (max-width: 999px) { 
+    flex-direction: column;
+  }
+}
+
+#menu ul a {
+  width: 20%;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+   }
 }
   
 #menu li {
@@ -189,6 +218,69 @@ header p {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
+/* dropdown section of the menu bar */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #FFF;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+    padding: 1.3rem 0;
+   }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $purple;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFF;
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem;
+  width: 100% !important;
+}
+
+.dropdown-content a:hover {
+  background-color: lighten($purple, 10);
+  color: $orange;
+  transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: lighten($purple, 10);
+  color: $orange;
+  transition: 0.3s;
+}
+
 
 /* top banner */
 .banner {
@@ -196,6 +288,17 @@ header p {
   background-repeat: no-repeat;
   background-position: center;
   height: 85vh;
+
+  @media only screen and (max-width: 999px) { 
+    padding-bottom: 10px;
+    background-position: 60%;
+    margin-top: 80px;
+    padding-top: 20px;
+  }
+  
+  @media only screen and (max-width: 500px) { 
+    height: auto;
+   }
 }
 
 .banner div {
@@ -204,6 +307,12 @@ header p {
   left: 14%;
   top: 30%;
   width: 40%;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+    left: 0;
+    text-align: center;
+   }
 }
 
 .banner h1 {
@@ -215,11 +324,19 @@ header p {
 .banner h2 {
   font-size: 1.7rem;
   color: $purple;
+
+  @media only screen and (max-width: 999px) {
+    color: $orange;
+   }
 }
 
 .banner h3 {
   font-size: 1.1rem;
   color: $burgundy;
+
+  @media only screen and (max-width: 999px) {
+    color: $red;
+   }
 }
 
 .banner a {
@@ -227,6 +344,10 @@ header p {
   display: flex;
   width: 110px;
   text-align: center;
+
+  @media only screen and (max-width: 999px) {
+    margin: 20px auto 0;
+   }
 }
 
 
@@ -237,6 +358,29 @@ header p {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+}
+
+.b-info-q {
+  @media only screen and (max-width: 1320px) {
+    width: 50%;
+   }
+
+   @media only screen and (max-width: 700px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+}
+
+.b-info-first {
+  @media only screen and (max-width: 1320px) {
+    display: flex;
+    flex-flow: row-reverse;
+   }
+
+   @media only screen and (max-width: 700px) {
+      justify-content: center;
+    }
 }
 
 .boxes a:hover {
@@ -285,6 +429,10 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @media only screen and (max-width: 1305px) {
+    background-size: cover;
+   }
 }
 
 .cta-box {
@@ -310,6 +458,10 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media only screen and (max-width: 999px) {
+    margin-bottom: 15px;
+   }
 }
 
 .cta-box-i img {
@@ -322,7 +474,7 @@ header p {
   border-radius: 5px;
   color: #fff;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .cta-box a:hover, .banner a:hover {
@@ -332,7 +484,7 @@ header p {
 }
 
 /* provide section */
-#prov h2, #service h2, #about h2, #benefit h2 {
+#prov h2, #service h2, #about h2, #benefit h2, #smallb h2, #mediumb h2, #blog h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
@@ -340,12 +492,21 @@ header p {
   margin: 0 0 5rem;
   padding-top: 4rem;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 999px) {
+    margin: 0 10px 20px;
+    padding-top: 10px;
+   }
 }
 
 .info-grid {
   display: flex;
   justify-content: space-around;
   width: 100%;
+
+  @media only screen and (max-width: 999px) {
+    flex-direction: column;
+  }
 }
 
 .info-grid-c {
@@ -353,10 +514,19 @@ header p {
   flex-direction: column;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+   }
 }
 
 .info-grid-c:not(:last-child) {
   border-right: 1px solid $purple;
+
+  @media only screen and (max-width: 999px) {
+    border-right: none;
+    margin-bottom: 10px;
+   }
 }
 
 .info-grid-c h3 {
@@ -380,12 +550,20 @@ header p {
   top: -20%;
   left: 85%;
   transform: rotate(27deg);
+
+  @media only screen and (max-width: 999px) {
+    left: 60%;
+   }
 }
 
 /* our services section */
 #service {
   background-image: url(images/background.png);
   background-repeat: no-repeat;
+  
+  @media only screen and (max-width: 1050px) {
+    background-size: cover;
+   }
 }
 
 #service img {
@@ -412,6 +590,10 @@ header p {
   position: relative;
   right: 50px;
   margin: 0;
+
+  @media only screen and (max-width: 999px) {
+    margin: 0 auto 10px;
+   }
 }
 
 #reviews ul li {
@@ -431,6 +613,10 @@ header p {
   align-items: center;
   padding: 2rem;
   margin: 0;
+
+  @media only screen and (max-width: 999px) {
+    height: auto;
+   }
 }
 
 #reviews img {
@@ -443,6 +629,10 @@ header p {
   border-radius: 5px;
   border: 1px solid $purple;
   box-shadow: 3px 3px 5px #aaaaaa;
+
+  @media only screen and (max-width: 999px) {
+    min-width: 300px;
+   }
 }
 
 /* about us section */
@@ -461,6 +651,13 @@ header p {
   width: 50%;
   min-width: 650px;
   margin-left: 50px;
+
+  @media only screen and (max-width: 1150px) {
+    min-width: 300px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+   }
 }
 
 #about p, #service p {
@@ -475,6 +672,16 @@ header p {
   display: block;
   border: 1px solid $purple;
   box-shadow: 2rem 2rem $purple;
+
+  @media only screen and (max-width: 600px) {
+    width: 100% !important;
+   }
+    @media only screen and (max-width: 999px) {
+      width: 400px;
+    }
+    @media only screen and (max-width: 1150px) {
+      box-shadow: none;
+      }
 }
 
 /* benefit section */
@@ -483,11 +690,19 @@ header p {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 80px;
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+   }
 }
 
 #benefit article {
   display: flex;
   width: 35%;
+  
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+   }
 }
 
 #benefit ul {
@@ -495,8 +710,13 @@ header p {
   list-style: none;
   margin: 0 5rem 0 auto;
   font-size: 1.6rem;
-  width: 34rem;
+  width: 100%;
   padding: 0;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 10px 10px 20px;
+    text-align: center;
+   }
 }
 
 #benefit ul li:not(:first-child) {
@@ -506,6 +726,18 @@ header p {
 #benefit img {
   border: 1px solid $purple;
   box-shadow: 2rem 2rem $purple;
+
+   @media only screen and (max-width: 1200px) {
+    box-shadow: none;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 1750px) {
+      width: 600px;
+      height: 400px;
+     }
 }
 
 /* contact section */
@@ -523,7 +755,7 @@ header p {
   border-radius: 25px;
 }
 
-#contact h2 {
+#contact h3 {
   font-size: 3rem;
   color: #fff;
   text-transform: uppercase;
@@ -586,21 +818,34 @@ header p {
 
 /* footer section */
 footer {
-  display: grid !important;
-  grid-template-columns: 25% 25% 25% 25%;
+  display: flex;
+  justify-content: space-between;
   background-color: $purple;
   height: 150px;
+
+  @media only screen and (max-width: 999px) {
+    height: auto;
+    flex-direction: column;
+   }
 }
 
 footer div {
   display: flex;
   align-items: center;
   height: 100%;
-  margin: 0 auto;
+}
+
+footer #footer-social {
+  margin-left: 50px;
+
+  @media only screen and (max-width: 999px) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+   }
 }
 
 footer div a:not(:first-child) {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 footer p {
@@ -608,11 +853,16 @@ footer p {
   color: #fff;
   font-weight: 700;
   display: block;
-  margin: auto 1rem auto auto;
+  margin: auto;
 }
 
 #footer-copy {
   flex-direction: column;
+  margin-right: 50px;
+
+  @media only screen and (max-width: 999px) {
+    margin: 0 0 30px 0;
+  }
 }
 
 footer ul {
@@ -620,6 +870,10 @@ footer ul {
   color: #fff;
   text-align: center;
   padding: 0;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+   }
 }
 
 footer ul li:not(:first-child) {
@@ -631,52 +885,210 @@ footer span {
 }
 
 #footer-logo {
-  width: 15%;
+  width: 80px;
   display: block;
-  margin: 2rem 3rem 0 auto;
+  margin: 2rem auto 0 auto;
 }
 
-/* small.html webpage layout */
-#smallb, #mediumb {
-  margin-top: 200px;
-  height: 900px;
+#socialmedia:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* small.html and medium.html webpage section */
+#smallb, #mediumb, #blog {
+  margin-top: 150px;
 }
 
 #smallb article, #mediumb article {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-
-#smallb article h2, #mediumb article h2 {
-  grid-column: 1 / span 2;
-  text-align: center;
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: $yellow;
-  margin: 0 0 4rem;
-  text-transform: uppercase;
-}
-
-#smallb p, #mediumb p {
   display: flex;
-  align-items: center;
+  justify-content: center;
   height: 100%;
-  margin: 0 auto;
-  font-size: 1.5rem;
+  align-items: center;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+#smallb ul, #mediumb ul {
+  height: 100%;
+  font-size: 1.4rem;
   font-weight: 600;
-  padding: 0 5rem 0 15rem;
+  list-style: none;
+  width: 40%;
+  line-height: 1.5;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+   }
+}
+
+#smallb article img, #mediumb article img {
+  border: 1px solid $purple;
+  box-shadow: 2rem 2rem $purple;
+
+  @media only screen and (max-width: 999px) {
+    box-shadow: none;
+    width: 100%;
+   }
 }
 
 #smallb-image1, #mediumb-image1 {
   display: block;
-  position: relative;
-  top: -70%;
-  left: 6%;
+  position: absolute;
+  left: 8%;
+  top: 45%;
+
+  @media only screen and (max-width: 1400px) {
+    position: relative;
+    left: 25% !important;
+    display: inline-flex;
+   }
+
+   @media only screen and (max-width: 1800px) { 
+      left: 7%;
+    }
+    @media only screen and (max-width: 1700px) {
+      left: 6%;
+     }
+     @media only screen and (max-width: 1600px) {
+       left: 5%;
+      }
+      @media only screen and (max-width: 1500px) {
+        left: 4%;
+       }
 }
 
 #smallb-image2, #mediumb-image2 {
   display: block;
-  position: relative;
-  top: -69%;
-  left: 6%;
+  position: absolute;
+  top: 60%;
+  left: 8%;
+
+  @media only screen and (max-width: 1400px) {
+    position: relative;
+    left: 25% !important;
+    display: inline-flex;
+   }
+    @media only screen and (max-width: 1800px) { 
+      left: 7%;
+    }
+    @media only screen and (max-width: 1700px) {
+      left: 6%;
+     }
+     @media only screen and (max-width: 1600px) {
+       left: 5%;
+      }
+      @media only screen and (max-width: 1500px) {
+        left: 4%;
+       }
+}
+
+/* blog.html webpage section */
+
+#blog-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#blog-container #blog-post img {
+  width: 100%;
+}
+
+#blog-container #blog-post {
+  width: 50%;
+  padding-right: 20px;
+  line-height: 1.5;
+  min-width: 300px;
+  
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+   }
+}
+
+#blog-container #blog-post h4 {
+  font-style: italic;
+  color: #b7b7b7;
+}
+
+#blog-container #blog-post h2 {
+  text-align: left;
+  color: $purple;
+  font-size: 1.9rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+#blog-container #blog-aside {
+  width: 20%;
+  background-color: $purple;
+  margin-left: 20px;
+  min-width: 300px;
+
+  @media only screen and (max-width: 999px) {
+    width: 100%;
+    margin: 0;
+   }
+}
+
+#blog-container #blog-aside #blog-recent {
+  padding-bottom: 50px;
+}
+
+#blog-container #blog-aside #blog-recent h3 {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: $orange;
+}
+
+#blog-container #blog-aside #blog-recent ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+#blog-container #blog-aside #blog-recent ul li:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+#blog-container #blog-aside #blog-recent ul li a {
+  color: #fff;
+}
+
+#blog-container #blog-aside #blog-recent ul li a:hover {
+  color: $orange;
+  transition: 0.3s;
+}
+
+#blog-aside #contact {
+  background: none;
+  padding: 0;
+}
+
+#blog-aside #contact article {
+  border-radius: 0;
+  background: none;
+}
+
+#blog-aside #contact h3 {
+  font-size: 2rem;
+  color: $orange;
+}
+
+#blog-aside #contact #fname, #blog-aside #contact #email, #blog-aside #contact #ym {
+  font-size: 1.2rem;
+}
+
+#blog-aside #contact #submit {
+  background-color: $orange;
+}
+
+#blog-aside #contact #submit:hover {
+  background-color: lighten($color: $orange, $amount: 10);
+  color: #fff;
 }

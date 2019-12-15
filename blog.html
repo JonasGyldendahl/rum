@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/rtf.png">
+    <title>Blog posts | Rum til Forandring</title>
+</head>
+<body>
+  <!-- Top bar -->
+<header>
+    <div>
+      <a href="index.html"><img src="images/rtf.png" alt="Rum"></a>
+    </div>
+    <section>
+      <p>RUM til forandring</p>
+    </section>
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" id="toggle" onClick="toggleMenu()" />
+      
+        <span id="purple"></span>
+        <span id="burgondy"></span>
+        <span id="orange"></span>
+      
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu items -->
+  <div class="menu-closed" id="menu">
+    <ul>
+      <a href="index.html">
+        <li>Home</li>
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+          <a href="/small.html">Small businesses</a>
+          <a href="/medium.html">Medium businesses</a>
+        </div>
+      </div>
+      <a href="index.html#prov">
+        <li>Areas of expertise</li>
+      </a>
+      <a href="#">
+        <li>Blog</li>
+      </a>
+      <a href="index.html#contact">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
+
+  <!--############ Main content ############-->
+
+  <main>
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="blog-container">
+            <article id="blog-post">
+                <img src="images/coaching.png" alt="this is a featured image">
+                <h4>author: Jane Doe, date: 14/12/2019</h4>
+                <h2>This is the blog title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, delectus qui hic expedita voluptatem, voluptatibus, molestiae est vero rem excepturi obcaecati non. Architecto dolore praesentium illum blanditiis vitae fugit natus necessitatibus repellat nihil id quae explicabo magnam debitis libero unde suscipit nisi neque facere aliquid ex voluptatum, ipsum accusamus odio. Minus, modi. Vel perspiciatis repudiandae cupiditate tempore modi qui possimus?</p>
+                <h3>Another sample headline</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos consequatur voluptas ad reiciendis iste rerum molestiae autem deleniti iusto architecto eum possimus, consequuntur commodi maiores consectetur praesentium quo perferendis beatae aperiam libero ut, dolor rem quasi? Eius ab facere, culpa maiores quo magnam. Ad, consequatur optio cum ipsum, labore fugit culpa modi commodi dignissimos reiciendis illo? Explicabo, necessitatibus labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos consequatur voluptas ad reiciendis iste rerum molestiae autem deleniti iusto architecto eum possimus, consequuntur commodi maiores consectetur praesentium quo perferendis beatae aperiam libero ut, dolor rem quasi? Eius ab facere, culpa maiores quo magnam. Ad, consequatur optio cum ipsum, labore fugit culpa modi commodi dignissimos reiciendis illo? Explicabo, necessitatibus labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos consequatur voluptas ad reiciendis iste rerum molestiae autem deleniti iusto architecto eum possimus, consequuntur commodi maiores consectetur praesentium quo perferendis beatae aperiam libero ut, dolor rem quasi? Eius ab facere, culpa maiores quo magnam. Ad, consequatur optio cum ipsum, labore fugit culpa modi commodi dignissimos reiciendis illo? Explicabo, necessitatibus labore.</p>
+                <h3>Another sample headline</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos consequatur voluptas ad reiciendis iste rerum molestiae autem deleniti iusto architecto eum possimus, consequuntur commodi maiores consectetur praesentium quo perferendis beatae aperiam libero ut, dolor rem quasi? Eius ab facere, culpa maiores quo magnam. Ad, consequatur optio cum ipsum, labore fugit culpa modi commodi dignissimos reiciendis illo? Explicabo, necessitatibus labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos consequatur voluptas ad reiciendis iste rerum molestiae autem deleniti iusto architecto eum possimus, consequuntur commodi maiores consectetur praesentium quo perferendis beatae aperiam libero ut, dolor rem quasi? Eius ab facere, culpa maiores quo magnam. Ad, consequatur optio cum ipsum, labore fugit culpa modi commodi dignissimos reiciendis illo? Explicabo, necessitatibus labore.</p>
+                <h3>Final sample headline</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, veniam? Voluptas hic aspernatur saepe accusamus. Laudantium cum hic adipisci, quidem ea minus laborum totam voluptas tempore voluptatibus deserunt id, tenetur placeat nesciunt possimus pariatur eum? Cum deserunt debitis officia molestiae. Veritatis nam eligendi ab error expedita recusandae dolor blanditiis quo alias. Nesciunt, magnam rerum deleniti placeat nemo asperiores culpa sint?</p>
+            </article>
+            <div id="blog-aside">
+                <section id="blog-recent">
+                    <h3>Recent Blogs</h3>
+                    <ul>
+                        <li><a href="#">> Businesses and how to make them flourish</a></li>
+                        <li><a href="#">> How to get a good workflow</a></li>
+                        <li><a href="#">> Keep your employees happy</a></li>
+                        <li><a href="#">> Further improvement on infrastructure</a></li>
+                        <li><a href="#">> Where to find the right market</a></li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <article>
+                      <h3>contact me</h3>
+                      <form action="#">
+                        <input type="text" name="fullname" id="fname" placeholder="Full Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <textarea name="yourmessage" id="ym" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        <input type="submit" id="submit" value="SEND">
+                      </form>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footer-social">
+      <a id="socialmedia" href="#"><img src="images/instagram.png" alt="instagram logo"></a>
+      <a id="socialmedia" href="#"><img src="images/facebook.png" alt="facebook logo"></a>
+      <a id="socialmedia" href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
+      <a id="socialmedia" href="#"><img src="images/youtube.png" alt="youtube logo"></a>
+    </div>
+    <div>
+      <ul>
+        <li><span>Find us:</span></li>
+        <li>Solbjerg Pl. 3,</li>
+        <li>2000 Frederiksberg <br> Denmark</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span>+45 40 23 45 22</span></li>
+        <li><span>rumtilforandring.dk</span></li>
+      </ul>
+    </div>
+    <div id="footer-copy">
+      <a href="#"><img src="images/rtf.png" id="footer-logo" alt="RUM til forandring logo"></a>
+      <p>Copyright &copy; 2019</p>
+    </div>
+  </footer>
+
+  <script src="js.js"></script>
+</body>
+</html>

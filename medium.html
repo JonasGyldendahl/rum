@@ -5,110 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="images/rtf.png">
+    <title>Medium Businesses | Rum til forandring</title>
 </head>
 <body>
-    <!-- Top bar -->
-    <header class="row m-0">
-        <div class="col-4">
-            <a href="index.html"><img src="images/rtf.png" alt="Rum til forandring logo"></a>
-        </div>
-        <section class="col-4 text-center">
-            <h1>RUM til forandring</h1>
-        </section>
-        <nav class="col-4">
-            <div id="menuToggle">
-                <input type="checkbox" id="toggle" onClick="toggleMenu()" />
-      
-                <span id="purple"></span>
-                <span id="burgondy"></span>
-                <span id="orange"></span>
-            </div>
-        </nav>
-    </header>
-  
-    <!-- Menu items -->
-    <div class="row m-0 menu-closed" id="menu">
-        <ul>
-            <a href="index.html">
-                <li>Home</li>
-            </a>
-            <a href="index.html#service">
-                <li>Services</li>
-            </a>
-            <a href="index.html#reviews">
-                <li>Reviews</li>
-            </a>
-            <a href="index.html#about">
-                <li>About</li>
-            </a>
-            <a href="index.html#contact">
-                <li>Contact</li>
-            </a>
-        </ul>
+  <!-- Top bar -->
+<header>
+    <div>
+      <a href="index.html"><img src="images/rtf.png" alt="Rum"></a>
     </div>
+    <section>
+      <p>RUM til forandring</p>
+    </section>
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" id="toggle" onClick="toggleMenu()" />
+      
+        <span id="purple"></span>
+        <span id="burgondy"></span>
+        <span id="orange"></span>
+      
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu items -->
+  <div class="menu-closed" id="menu">
+    <ul>
+      <a href="index.html">
+        <li>Home</li>
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn">Services</button>
+        <div class="dropdown-content">
+          <a href="/small.html">Small businesses</a>
+          <a href="#">Medium businesses</a>
+        </div>
+      </div>
+      <a href="index.html#prov">
+        <li>Areas of expertise</li>
+      </a>
+      <a href="blog.html">
+        <li>Blog</li>
+      </a>
+      <a href="index.html#contact">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
     
+    <!--############ Main content ############-->
+
     <main>
         <section id="mediumb">
-            <article>
-                <h2>SPECIAL OFFER FOR MEDIUM SIZE BUSINESSES</h2>
-                <p>
-                    Premium 25-200 employees <br>
-                    Business savings, with a subsequent action plan for your 
-                    development<br>
-                    Corporation (2-4 meetings annually)<br>
-                    Follow-up and adjustment of the plan, with subsequently 
-                    adapted action plan<br>
-                    (2-4 meetings annually)<br><br>
-                        
-                    12 days for individual coaching<br>
-                    5 days a year on low-performers / stress / long-term sick leave
-                    phone/mail sparring on specific issues (unlimited)<br>
-                    Toolbox access, with simple management tools targeted to 
-                    your size<br><br>
-                        
-                    Corporation<br>
-                    20% discount on the hourly rate and other benefits
-                    A facilitated strategy process, consisting of 2 annual seminars 
-                    and preparation and follow-up Preparation of relevant 
-                    proposals for the work on the strategy                        
-                </p>
-                <img src="images/mediumb.png" alt="medium business image">
-            </article>
+            <h2>special offer for medium sized businesses</h2>
             <img src="images/mediumb-b.png" id="mediumb-image1" alt="medium business icon">
             <img src="images/mediumb-bp.png" id="mediumb-image2" alt="medium business plus icon">
+            <article>
+                <ul>
+                    <li>Premium 25-200 employees</li>
+                    <li>Business savings, with a subsequent action plan for your development</li>
+                    <li>Corporation (2-4 meetings annually)</li>
+                    <li>Follow-up and adjustment of the plan, with subsequently adapted action plan</li>
+                    <li>(2-4 meetings annually)</li><br>
+                    <li>12 days for individual coaching</li>
+                    <li>5 days a year on low-performers / stress / long-term sick leave phone/mail sparring on specific issues (unlimited)</li>
+                    <li>Toolbox access, with simple management tools targeted to your size Corporation</li><br>
+                    <li>20% discount on the hourly rate and other benefits</li>
+                    <li> A facilitated strategy process, consisting of 2 annual seminars and preparation and follow-up Preparation of relevant proposals for the work on the strategy</li>
+                </ul>
+                <img src="images/mediumb.png" alt="medium business image">
+            </article>  
         </section>
+
+    <!-- contact section -->
+    <section id="contact">
+      <article>
+        <h3>contact me</h3>
+        <form action="#">
+          <input type="text" name="fullname" id="fname" placeholder="Full Name">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <textarea name="yourmessage" id="ym" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <input type="submit" id="submit" value="SEND">
+        </form>
+      </article>
+    </section>
+    </main>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div>
-        <a href="#"><img src="images/instagram.png" alt="instagram logo"></a>
-        <a href="#"><img src="images/facebook.png" alt="facebook logo"></a>
-        <a href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
-        <a href="#"><img src="images/youtube.png" alt="youtube logo"></a>
-        </div>
-        <div>
-        <ul>
-            <li><span>Find us:</span></li>
-            <li>Solbjerg Pl. 3,</li>
-            <li>2000 Frederiksberg <br> Denmark</li>
-        </ul>
-        </div>
-        <div>
-        <ul>
-            <li><span>+45 40 23 45 22</span></li>
-            <li><span>rumtilforandring.dk</span></li>
-        </ul>
-        </div>
-        <div id="footer-copy">
-        <a href="#"><img src="images/rtf.png" id="footer-logo" alt="RUM til forandring logo"></a>
-        <p>Copyright &copy; 2019</p>
-        </div>
-    </footer>
-    
-    <script src="js.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div id="footer-social">
+      <a id="socialmedia" href="#"><img src="images/instagram.png" alt="instagram logo"></a>
+      <a id="socialmedia" href="#"><img src="images/facebook.png" alt="facebook logo"></a>
+      <a id="socialmedia" href="#"><img src="images/linkedin.png" alt="linkedin logo"></a>
+      <a id="socialmedia" href="#"><img src="images/youtube.png" alt="youtube logo"></a>
+    </div>
+    <div>
+      <ul>
+        <li><span>Find us:</span></li>
+        <li>Solbjerg Pl. 3,</li>
+        <li>2000 Frederiksberg <br> Denmark</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><span>+45 40 23 45 22</span></li>
+        <li><span>rumtilforandring.dk</span></li>
+      </ul>
+    </div>
+    <div id="footer-copy">
+      <a href="#"><img src="images/rtf.png" id="footer-logo" alt="RUM til forandring logo"></a>
+      <p>Copyright &copy; 2019</p>
+    </div>
+  </footer>
+
+  <script src="js.js"></script>
 </body>
 </html>
